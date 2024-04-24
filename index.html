@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay Calculator</title>
+</head>
+<style>
+    input{
+        width:30px;
+    }
+</style>
+<body>
+    <div id="mainContainer">
+        <h1>
+            Paycheck calculator
+        </h1>
+        <p>Simple tool to calculate your hours and expected wage/paycheck. All of this is done in your browser and gets deleted as soon as you close the page.</p>
+
+        <label for="wage">Hourly Wage:</label>
+        <input type="text" id="wage" />
+
+        <label for="twoWeek">2 weeks</label>
+        <input type="checkbox" id="twoWeek" />
+
+        <table>
+            <tr class="row"><td>Su:</td><td><input type="text" id="su1S"/></td></tr>
+            <tr class="row"><td>Mo:</td><td><input type="text" id="mo1S"/></td></tr>
+            <tr class="row"><td>Tu:</td><td><input type="text" id="tu1S"/></td></tr>
+            <tr class="row"><td>We:</td><td><input type="text" id="we1S"/></td></tr>
+            <tr class="row"><td>Th:</td><td><input type="text" id="th1S"/></td></tr>
+            <tr class="row"><td>Fr:</td><td><input type="text" id="fr1S"/></td></tr>
+            <tr class="row"><td>Sa:</td><td><input type="text" id="sa1S"/></td></tr>
+        </table>
+
+        <form action="">
+            <label for="totalHours">Total Hours:</label><input type="text" id="totalHours" disabled/>
+            <label for="totalEarned">Total Earnings:</label><input type="text" id="totalEarned" disabled/>
+            <label for="earnedAfterTax">After Tax:</label><input type="text" id="earnedAfterTax" disabled/>
+        </form>
+
+        <ul>
+            <li>TODO:</li>
+            <li>Add second week when the checkbox is checked. I tried to do this but it was hard lol</li>
+            <li>Add a second page where you put in your clock in/clock out time and it calculates based on that</li>
+            <li>Actually add styling and shit</li>
+            <li>Dont fuck up the torte (impossible)</li>
+            <li>Teach Sparky how to make good dough (also impossible)</li>
+        </ul>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The brock house companion</title>
+</head>
+<style>
+    input{
+        width:30px;
+    }
+</style>
+<body>
+    <div id="mainContainer">
+        <h1>
+            Hours Calculator
+        </h1>
+        <p>Simple tool to calculate your hours and expected wage/paycheck. All of this is done in your browser and gets deleted as soon as you close the page.</p>
+
+        <label for="wage">Hourly Wage:</label>
+        <input type="text" id="wage">
+
+        <table>
+            <tr><td>Su:</td><td><input type="text" id="su1S"/></td><td><select name="amOrPm" id="amSu1S" multiple><option value="am">am<option value="pm">pm</option></select></td><td><input type="text" id="su1F"/></td><td><select name="amOrPm" id="amSu1F" multiple><option value="am">am<option value="pm">pm</option></select></td><td>Su:</td><td><input type="text" id="su2S"/></td><td><select name="amOrPm" id="amSu2S"multiple><option value="am">am<option value="pm">pm</option></select></td><td><input type="text" id="su2F"/></td><td><select name="amOrPm" multiple><option value="am">am<option value="pm">pm</option></select></td></tr>
+            <tr><td>Mo:</td><td><input type="text" id="mo1S"/></td><td><select name="amOrPm" id="amMo1S" multiple><option value="am">am<option value="pm">pm</option></select></td><td><input type="text" id="mo1F"/></td><td><select name="amOrPm" id="amMo1F" multiple><option value="am">am<option value="pm">pm</option></select></td><td>Mo:</td><td><input type="text" id="mo2S"/></td><td><select name="amOrPm" id="amMo2S"multiple><option value="am">am<option value="pm">pm</option></select></td><td><input type="text" id="mo2F"/></td><td><select name="amOrPm" multiple><option value="am">am<option value="pm">pm</option></select></td></tr>
+            <tr><td>Tu:</td><td><input type="text" id="tu1S"/></td><td><select name="amOrPm" id="amTu1S" multiple><option value="am">am<option value="pm">pm</option></select></td><td><input type="text" id="tu1F"/></td><td><select name="amOrPm" id="amTu1F" multiple><option value="am">am<option value="pm">pm</option></select></td><td>Tu:</td><td><input type="text" id="tu2S"/></td><td><select name="amOrPm" id="amTu2S"multiple><option value="am">am<option value="pm">pm</option></select></td><td><input type="text" id="tu2F"/></td><td><select name="amOrPm" multiple><option value="am">am<option value="pm">pm</option></select></td></tr>
+            <tr><td>We:</td><td><input type="text" id="we1S"/></td><td><select name="amOrPm" id="amWe1S" multiple><option value="am">am<option value="pm">pm</option></select></td><td><input type="text" id="we1F"/></td><td><select name="amOrPm" id="amWe1F" multiple><option value="am">am<option value="pm">pm</option></select></td><td>We:</td><td><input type="text" id="we2S"/></td><td><select name="amOrPm" id="amWe2S"multiple><option value="am">am<option value="pm">pm</option></select></td><td><input type="text" id="we2F"/></td><td><select name="amOrPm" multiple><option value="am">am<option value="pm">pm</option></select></td></tr>
+            <tr><td>Th:</td><td><input type="text" id="th1S"/></td><td><select name="amOrPm" id="amTh1S" multiple><option value="am">am<option value="pm">pm</option></select></td><td><input type="text" id="th1F"/></td><td><select name="amOrPm" id="amTh1F" multiple><option value="am">am<option value="pm">pm</option></select></td><td>Th:</td><td><input type="text" id="th2S"/></td><td><select name="amOrPm" id="amTh2S"multiple><option value="am">am<option value="pm">pm</option></select></td><td><input type="text" id="th2F"/></td><td><select name="amOrPm" multiple><option value="am">am<option value="pm">pm</option></select></td></tr>
+            <tr><td>Fr:</td><td><input type="text" id="fr1S"/></td><td><select name="amOrPm" id="amFr1S" multiple><option value="am">am<option value="pm">pm</option></select></td><td><input type="text" id="fr1F"/></td><td><select name="amOrPm" id="amFr1F" multiple><option value="am">am<option value="pm">pm</option></select></td><td>Fr:</td><td><input type="text" id="fr2S"/></td><td><select name="amOrPm" id="amFr2S"multiple><option value="am">am<option value="pm">pm</option></select></td><td><input type="text" id="fr2F"/></td><td><select name="amOrPm" multiple><option value="am">am<option value="pm">pm</option></select></td></tr>
+            <tr><td>Sa:</td><td><input type="text" id="sa1S"/></td><td><select name="amOrPm" id="amSa1S" multiple><option value="am">am<option value="pm">pm</option></select></td><td><input type="text" id="sa1F"/></td><td><select name="amOrPm" id="amSa1F" multiple><option value="am">am<option value="pm">pm</option></select></td><td>Sa:</td><td><input type="text" id="sa2S"/></td><td><select name="amOrPm" id="amSa2S"multiple><option value="am">am<option value="pm">pm</option></select></td><td><input type="text" id="sa2F"/></td><td><select name="amOrPm" multiple><option value="am">am<option value="pm">pm</option></select></td></tr>
+        </table>
+
+        <form action="">
+            <label for="totalHours">Total Hours:</label><input type="text" id="totalHours" disabled/>
+            <label for="totalEarned">Total Earnings:</label><input type="text" id="totalEarned" disabled/>
+            <label for="earnedAfterTax">After Tax:</label><input type="text" id="earnedAfterTax" disabled/>
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
