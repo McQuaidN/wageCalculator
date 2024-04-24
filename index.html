@@ -20,17 +20,16 @@
         <label for="wage">Hourly Wage:</label>
         <input type="text" id="wage" />
 
-        <label for="twoWeek">2 weeks</label>
-        <input type="checkbox" id="twoWeek" />
+        <button id="twoWeek">Add Week</button>
 
         <table>
-            <tr class="row"><td>Su:</td><td><input type="text" id="su1S"/></td></tr>
-            <tr class="row"><td>Mo:</td><td><input type="text" id="mo1S"/></td></tr>
-            <tr class="row"><td>Tu:</td><td><input type="text" id="tu1S"/></td></tr>
-            <tr class="row"><td>We:</td><td><input type="text" id="we1S"/></td></tr>
-            <tr class="row"><td>Th:</td><td><input type="text" id="th1S"/></td></tr>
-            <tr class="row"><td>Fr:</td><td><input type="text" id="fr1S"/></td></tr>
-            <tr class="row"><td>Sa:</td><td><input type="text" id="sa1S"/></td></tr>
+            <tr id="row1"><td>Su:</td><td><input type="text" id="day0week0"/></td></tr>
+            <tr id="row2"><td>Mo:</td><td><input type="text" id="day1week0"/></td></tr>
+            <tr id="row3"><td>Tu:</td><td><input type="text" id="day2week0"/></td></tr>
+            <tr id="row4"><td>We:</td><td><input type="text" id="day3week0"/></td></tr>
+            <tr id="row5"><td>Th:</td><td><input type="text" id="day4week0"/></td></tr>
+            <tr id="row6"><td>Fr:</td><td><input type="text" id="day5week0"/></td></tr>
+            <tr id="row7"><td>Sa:</td><td><input type="text" id="day6week0"/></td></tr>
         </table>
 
         <form action="">
@@ -41,7 +40,7 @@
 
         <ul>
             <li>TODO:</li>
-            <li>Add second week when the checkbox is checked. I tried to do this but it was hard lol</li>
+            <li>Add second week when the checkbox is checked. I tried to do this but it was hard lol. DONE! Added multipke weeks which is both more useful and easier to implement.</li>
             <li>Add a second page where you put in your clock in/clock out time and it calculates based on that</li>
             <li>Actually add styling and shit</li>
             <li>Dont fuck up the torte (impossible)</li>

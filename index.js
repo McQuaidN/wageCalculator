@@ -1,14 +1,36 @@
 // create a list for every input
 var inputList = []
+// to keep track of how many weeks
+var weeks = 1;
 
 // add all inputs to a list so I can work with them more easily
-inputList.push(document.getElementById("mo1S"))
-inputList.push(document.getElementById("tu1S"))
-inputList.push(document.getElementById("we1S"))
-inputList.push(document.getElementById("th1S"))
-inputList.push(document.getElementById("fr1S"))
-inputList.push(document.getElementById("sa1S"))
-inputList.push(document.getElementById("su1S"))
+for(i = 0; i < 7; i++){
+    inputList.push(document.getElementById("day" + i + "week0"))
+}
+
+weeksCheck = document.getElementById("twoWeek")
+
+weeksCheck.addEventListener('click', function(){
+    newWeekList = []
+    newWeekList.push(document.getElementById('row1'))
+    newWeekList.push(document.getElementById('row2'))
+    newWeekList.push(document.getElementById('row3'))
+    newWeekList.push(document.getElementById('row4'))
+    newWeekList.push(document.getElementById('row5'))
+    newWeekList.push(document.getElementById('row6'))
+    newWeekList.push(document.getElementById('row7'))
+    newWeekList.forEach((element) => element.addEventListener('input', inputHandler))
+
+    for(i = 0; i < newWeekList.length; i++){
+        newCell = document.createElement('td')
+
+        newCell.innerHTML = '<input type="text" id="day' + i + 'week' + weeks +'" value="0"/>'
+
+        newWeekList[i].appendChild(newCell)
+        inputList.push(document.getElementById("day" + i + "week" + weeks))
+    }
+    weeks++
+})
 
 // set empty values to 0
 inputList.forEach((element) => {
@@ -21,7 +43,6 @@ inputList.forEach((element) => {
 // it just runs a simple calculation
 const inputHandler = function(){
     hours = 0;
-    
     // adds every input together
     for(i=0;i<inputList.length;i++){
         hours += parseFloat(inputList[i].value)
@@ -31,17 +52,17 @@ const inputHandler = function(){
     totalHours.value = hours
 
     // calculates overtime if applicable
-    if(hours > 44){
-        totalEarned.value = 44 * parseFloat(wage.value) + ((hours - 44) * wage.value * 1.5)
+    overtimeThreshold = weeks * 44
+    if(hours > overtimeThreshold){
+        totalEarned.value = overtimeThreshold * parseFloat(wage.value) + ((hours - overtimeThreshold) * wage.value * 1.5)
     } else{
         totalEarned.value = hours * parseFloat(wage.value)
     }
+    console.log(totalHours, totalHours.value, totalEarned, totalEarned.value, earnedAfterTax, earnedAfterTax.value)
 
     // calculates tax. I just assume they take 15%.
     earnedAfterTax.value = (parseFloat(totalEarned.value)) * 0.85
 }
-
-
 
 // code that runs the script that runs every time you type in a text box
 inputList.forEach((element) => element.addEventListener('input', inputHandler))
