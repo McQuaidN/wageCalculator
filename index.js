@@ -8,8 +8,10 @@ for(i = 0; i < 7; i++){
     inputList.push(document.getElementById("day" + i + "week0"))
 }
 
+// gets add week button
 weeksCheck = document.getElementById("twoWeek")
 
+// adds subsequent weeks every time you click the button
 weeksCheck.addEventListener('click', function(){
     newWeekList = []
     newWeekList.push(document.getElementById('row1'))
@@ -31,6 +33,20 @@ weeksCheck.addEventListener('click', function(){
     }
     weeks++
 })
+
+subtractWeek = document.getElementById("subWeek")
+
+subtractWeek.addEventListener('click', function(){
+    weekIndex = weeks - 1
+    inputList.splice(inputList.length - 7, 7)
+
+    for(i = 6; i > -1; i--){
+        elementid = 'day' + i + 'week' + weekIndex
+        document.getElementById(elementid).remove()
+    }
+    weeks--
+})
+
 
 // set empty values to 0
 inputList.forEach((element) => {
@@ -68,3 +84,8 @@ const inputHandler = function(){
 inputList.forEach((element) => element.addEventListener('input', inputHandler))
 // add it to wage box as well cause it's a bitch to work with if I put the wage thing in with the other inputs lol
 wage.addEventListener('input', inputHandler)
+
+
+weeksCheck.addEventListener('click', inputHandler)
+
+subtractWeek.addEventListener('click', inputHandler)
